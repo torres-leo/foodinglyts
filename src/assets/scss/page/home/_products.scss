@@ -1,0 +1,223 @@
+.Products {
+	background-color: map-get($gray, regular);
+
+	&-content {
+		padding: 80px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin: 0 auto;
+		max-width: 1420px;
+
+		@include media-breakpoint-down(lg) {
+			width: 720px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			padding: 60px 0;
+			width: 365px;
+		}
+	}
+
+	&-text {
+		color: map-get($black-color, secondary);
+		font-size: 36px;
+		font-family: $font-primary;
+		font-weight: 500;
+		margin-bottom: 60px;
+
+		&::after {
+			background: $green;
+			content: '';
+			display: block;
+			height: 1px;
+			left: 50%;
+			margin-top: 15px;
+			position: absolute;
+			transform: translate(-50%, 50%);
+			width: 200px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			font-size: 26px;
+		}
+	}
+
+	&-title {
+		color: map-get($black-color, secondary);
+		font-size: 24px;
+		font-family: $font-primary;
+		font-weight: 300;
+		margin-bottom: 20px;
+
+		@extend .arrows;
+	}
+
+	&-list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		gap: 24px;
+		margin: 0 auto;
+
+		@include media-breakpoint-down(lg) {
+			padding: 0 10px;
+			justify-content: space-between;
+		}
+		@include media-breakpoint-down(sm) {
+			padding: 0;
+			justify-content: center;
+		}
+	}
+
+	&-filters {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 35px;
+		justify-content: center;
+		margin-bottom: 30px;
+		width: 100%;
+
+		@include media-breakpoint-down(lg) {
+			gap: 25px;
+			width: 720px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			gap: 15px;
+			width: 350px;
+		}
+	}
+
+	&-card {
+		background-color: $white;
+		border-radius: 11px;
+		height: 400px;
+		margin-bottom: 10px;
+		overflow: hidden;
+		position: relative;
+		width: 336px;
+
+		&:hover {
+			box-shadow: $shadow-product;
+
+			.Products-cardImage {
+				transform: scale(1.2);
+			}
+		}
+
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 10px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			width: 360px;
+		}
+	}
+
+	&-cardHeader {
+		background-color: $white;
+		border-radius: 11px;
+		width: 100%;
+		padding: 10px;
+		position: relative;
+	}
+
+	&-cardBody {
+		padding: 20px 15px;
+	}
+
+	&-cardImage {
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 198px;
+		object-fit: cover;
+		transition: all 0.4s ease-in-out;
+		width: 100%;
+	}
+
+	&-cardName {
+		color: map-get($black-color, primary);
+		cursor: pointer;
+		font-family: $font-primary;
+		font-size: 20px;
+		font-weight: 500;
+		margin-bottom: 10px;
+		transition: color 0.4s ease-in-out;
+		text-transform: capitalize;
+
+		&:hover {
+			color: $green;
+		}
+
+		@include media-breakpoint-down(sm) {
+			font-size: 16px;
+		}
+	}
+
+	&-cardDiscount {
+		background-color: $green;
+		color: $white;
+		border-radius: 100%;
+		bottom: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: $font-primary;
+		font-size: 16px;
+		font-weight: 500;
+		height: 45px;
+		line-height: 45px;
+		position: absolute;
+		right: 40px;
+		text-align: end;
+		width: 45px;
+	}
+
+	&-cardInfo {
+		margin-bottom: 10px;
+	}
+
+	&-cardRating {
+		color: $green;
+		font-family: $font-secondary;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 28px;
+	}
+
+	&-cardReview {
+		color: map-get($gray, dark);
+		font-family: $font-secondary;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 28px;
+		margin-left: 10px;
+	}
+
+	&-cardPrice {
+		font-family: $font-primary;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 1.2;
+		margin-bottom: 0;
+	}
+
+	&-cardAdd {
+		bottom: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 20px;
+		position: absolute;
+		width: 100%;
+	}
+
+	.filterActive {
+		color: map-get($black-color, secondary);
+	}
+}

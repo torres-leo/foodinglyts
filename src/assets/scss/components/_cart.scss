@@ -1,0 +1,95 @@
+.Cart {
+	width: 100%;
+	padding: 15px;
+
+	@include media-breakpoint-down(lg) {
+		width: 330px;
+	}
+
+	&-counter {
+		font-family: $font-primary;
+		font-size: 17px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+
+	&-close {
+		font-size: 18px;
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			color: $red;
+		}
+	}
+
+	&-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 10px;
+	}
+
+	&-item {
+		border-bottom: 1px dashed map-get($gray, border);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 15px;
+		padding: 15px 0;
+		transition: all 0.4s ease-in-out;
+
+		&:hover {
+			.Cart-delete {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	&-itemImage {
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 34.63px;
+		width: 55px;
+	}
+
+	&-itemInfo {
+		margin-left: 20px;
+		margin-right: 75px;
+	}
+
+	&-itemName {
+		color: $green;
+		font-family: $font-primary;
+		font-size: 15px;
+		font-weight: 400;
+		margin-bottom: 0;
+		text-transform: capitalize;
+	}
+	&-itemPrice {
+		margin-bottom: 0;
+	}
+
+	&-delete {
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.2s ease-in-out;
+
+		&:hover {
+			color: $red;
+		}
+	}
+
+	&-total {
+		border-bottom: 1px dashed map-get($gray, border);
+		color: map-get($black-color, secondary);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-family: $font-primary;
+		font-size: 15px;
+		font-weight: 600;
+		line-height: 1.5;
+		margin-bottom: 15px;
+	}
+}

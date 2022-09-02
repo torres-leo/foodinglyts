@@ -1,0 +1,9 @@
+.arrows {
+	&::after {
+		content: url(https://foodingly.netlify.app/assets/img/icon/arrow-right.png);
+	}
+
+	&::before {
+		content: url(https://foodingly.netlify.app/assets/img/icon/arrow-left.png);
+	}
+}

@@ -1,0 +1,112 @@
+.Appbar {
+	background-color: $green;
+	color: $white;
+	padding: 10px 0;
+	width: 100%;
+
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
+
+	&-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1420px;
+		margin: 0 auto;
+		width: 100%;
+
+		@include media-breakpoint-down(lg) {
+			width: 700px;
+		}
+	}
+
+	&-info {
+		color: $white;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin-bottom: 0;
+		padding-left: 0;
+	}
+
+	&-item {
+		color: $white;
+		cursor: pointer;
+		font-family: $font-primary;
+		font-size: 14px;
+		font-weight: 400;
+		list-style: none;
+		line-height: 1.5;
+		margin-left: 0;
+		margin-right: 25px;
+		position: relative;
+		transition: color 0.3s ease-in-out;
+
+		&::before {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			top: 5px;
+			right: -15px;
+			width: 1px;
+			height: 15px;
+			background-color: map-get($gray, border);
+		}
+
+		&:nth-of-type(3) {
+			&::before {
+				display: none;
+			}
+		}
+
+		&:hover {
+			color: map-get($black-color, secondary);
+		}
+
+		@include media-breakpoint-down(lg) {
+			&:nth-of-type(1) {
+				margin-right: 0;
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&-icon {
+		color: $white;
+		font-size: 14px;
+		padding: 0 5px;
+		text-decoration: none;
+
+		&:hover {
+			color: $white;
+		}
+
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+	}
+
+	&-settings {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 0;
+		position: relative;
+	}
+
+	&-text {
+		margin-left: 15px;
+		margin-bottom: 0;
+	}
+
+	.dropdown-toggle.btn.btn-secondary {
+		margin: 0;
+	}
+
+	.CustomDropdown-options {
+		margin-left: 15px;
+	}
+}

@@ -1,0 +1,36 @@
+// Fonts
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Poppins', sans-serif;
+
+//Colors
+$green: #80c100;
+$black-color: (
+	primary: #2b2540,
+	secondary: #212529,
+);
+$white: #ffffff;
+$gray: (
+	input: #dddddd75,
+	border: #dbdbdb78,
+	submenu: #f7f7f7,
+	submenu-border: #dbeefd,
+
+	dark: #818090,
+	medium: #c4c4c457,
+	regular: #e5e5e5,
+	light: #f1f1f1,
+	thin: #e9e9e9,
+);
+$red: #ff0000;
+$cream: #fceceb;
+
+//Shadow
+$shadow: 8px 10px 24px rgb(0 0 0 / 10%);
+$shadow-menu: 0 2px 28px 0 rgb(0 0 0 / 6%);
+$shadow-submenu: 0 0 15px 0 rgb(0 0 0 / 10%);
+$shadow-offer: 6px 8px 20px rgb(0 0 0 / 8%);
+$shadow-testimonial: -4px -4px 16px rgb(0 0 0 / 8%), 4px 8px 16px rgb(0 0 0 / 8%);
+$shadow-product: 4px 14px 28px rgb(0 0 0 / 10%);
+$shadow-form: -4px -4px 16px rgb(0 0 0 / 8%), 4px 8px 16px rgb(0 0 0 / 8%);
+$shadow-field: 0px 1px 13px 0px #0000000d;
+$shadow-cardContact: -4px -5px 14px rgb(0 0 0 / 8%), 5px 8px 16px rgb(0 0 0 / 8%);

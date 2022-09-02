@@ -1,0 +1,252 @@
+.Footer {
+	background-color: $white;
+	width: 100%;
+
+	&-container {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		margin: 0 auto;
+		padding: 100px 0;
+		max-width: 1420px;
+
+		@include media-breakpoint-down(lg) {
+			justify-content: flex-start;
+			padding: 70px 0 40px;
+			width: 720px;
+		}
+		@include media-breakpoint-down(sm) {
+			justify-content: flex-start;
+			padding: 70px 0 40px;
+			width: 360px;
+		}
+	}
+
+	&-title {
+		border-bottom: 1px solid $green;
+		color: map-get($black-color, secondary);
+		display: inline-block;
+		font-size: 18px;
+		font-family: $font-primary;
+		font-weight: 500;
+		line-height: 1.2;
+		padding-bottom: 5px;
+		margin-bottom: 15px;
+	}
+
+	&-helpInfo {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		margin-top: 5px;
+
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 30px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 30px;
+			width: 100%;
+		}
+	}
+
+	&-help {
+		line-height: 1.5;
+		margin-right: 120px;
+		width: 360px;
+
+		@include media-breakpoint-down(lg) {
+			margin-right: 0px;
+		}
+	}
+
+	&-helpItem {
+		border-left: 2px solid $green;
+		margin-bottom: 24px;
+		padding-top: 5px;
+		padding-left: 9px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&-helpText {
+		font-size: 16px;
+		font-family: $font-primary;
+		font-weight: 500;
+		line-height: 1.2;
+		margin-bottom: 8px;
+	}
+
+	&-helpGreen {
+		color: $green;
+		font-size: 24px;
+		font-family: $font-primary;
+		font-weight: 500;
+		line-height: 1.2;
+		margin-bottom: 0;
+		transition: color ease-in-out 0.3s;
+
+		&:hover {
+			color: map-get($black-color, secondary);
+		}
+	}
+
+	&-socialList {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		padding: 0;
+		margin-bottom: 0;
+	}
+
+	&-socialLink {
+		list-style: none;
+	}
+
+	&-icon {
+		color: $green;
+		transition: color 0.3s ease-in-out 0.1s;
+
+		&:hover {
+			color: map-get($black-color, primary);
+		}
+	}
+
+	&-quick {
+		// margin-left: 228px;
+		// text-align: center;
+		width: 240px;
+
+		@include media-breakpoint-down(lg) {
+			margin-left: 0px;
+		}
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 30px;
+			width: 100%;
+		}
+	}
+
+	&-list {
+		margin-top: 5px;
+		padding: 0;
+
+		@include media-breakpoint-down(sm) {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+
+	&-link {
+		list-style: none;
+		margin-bottom: 15px;
+	}
+
+	&-item {
+		color: map-get($black-color, primary);
+		font-family: $font-primary;
+		font-size: 16px;
+		text-decoration: none;
+		text-transform: capitalize;
+		transition: color ease-in-out 0.35s;
+
+		&:hover {
+			color: $green;
+		}
+	}
+
+	&-support {
+		// margin-left: 118px;
+		width: 240px;
+
+		@include media-breakpoint-down(lg) {
+			margin-left: 0;
+		}
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 30px;
+			width: 100%;
+		}
+	}
+
+	&-opening {
+		// margin-left: 88px;
+		width: 448px;
+
+		@include media-breakpoint-down(lg) {
+			margin-left: 0;
+		}
+
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+	}
+
+	&-table {
+		border: 1px solid map-get($gray, thin);
+		border-collapse: collapse;
+		border-spacing: 2px;
+		border-style: solid;
+		display: table;
+		margin-top: 5px;
+		width: 450px;
+
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 30px;
+			width: 100%;
+		}
+	}
+
+	&-tablecell {
+		border: 1px solid map-get($gray, medium);
+		color: map-get($black-color, secondary);
+		font-family: $font-primary;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.5;
+		margin: 0;
+		padding: 8px;
+		text-align: left;
+	}
+
+	&Copyright {
+		background-color: #f3f6fd;
+		padding: 15px 0;
+		width: 100%;
+
+		&-content {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 0 auto;
+			width: 1420px;
+
+			@include media-breakpoint-down(lg) {
+				width: 720px;
+			}
+			@include media-breakpoint-down(sm) {
+				flex-direction: column;
+				width: 360px;
+			}
+		}
+
+		&-text {
+			color: map-get($black-color, primary);
+			font-family: $font-secondary;
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 28px;
+			margin-bottom: 0;
+
+			@include media-breakpoint-down(sm) {
+			}
+			margin-bottom: 10px;
+		}
+
+		&-image {
+			background-image: url('https://foodingly.netlify.app/assets/img/common/cards.png');
+			height: 35px;
+			width: 212px;
+		}
+	}
+}

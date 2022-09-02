@@ -1,0 +1,212 @@
+.Blog {
+	width: 100%;
+	background-color: map-get($gray, regular);
+
+	&-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 80px 0 100px;
+		max-width: 1440px;
+		margin: 0 auto;
+
+		@include media-breakpoint-down(lg) {
+			width: 720px;
+			padding: 70px 0;
+		}
+
+		@include media-breakpoint-down(sm) {
+			padding: 40px 0;
+			width: 360px;
+		}
+	}
+
+	&-title {
+		color: map-get($black-color, secondary);
+		font-family: $font-primary;
+		font-size: 24px;
+		font-weight: 300;
+		margin-bottom: 20px;
+		text-align: center;
+
+		@extend .arrows;
+	}
+
+	&-text {
+		color: map-get($black-color, secondary);
+		font-family: $font-primary;
+		font-size: 36px;
+		font-weight: 500;
+		margin-bottom: 55px;
+		text-align: center;
+		text-transform: capitalize;
+
+		&::after {
+			background: $green;
+			content: '';
+			display: block;
+			height: 1px;
+			left: 50%;
+			margin-top: 15px;
+			position: absolute;
+			transform: translate(-50%, 50%);
+			width: 200px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			font-size: 26px;
+		}
+	}
+
+	&-cards {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		gap: 23px;
+		justify-content: center;
+		width: 100%;
+
+		@include media-breakpoint-down(lg) {
+			justify-content: flex-start;
+			width: 698px;
+		}
+		@include media-breakpoint-down(sm) {
+			justify-content: center;
+			width: 100%;
+		}
+	}
+
+	&-card {
+		background-color: $white;
+		border-radius: 12px;
+		box-shadow: $shadow;
+		height: 542px;
+		overflow: hidden;
+		position: relative;
+		transition: 0.4s all ease-in-out;
+		max-width: 456px;
+
+		&:hover {
+			.Blog-image {
+				transform: scale(1.2) rotate(3deg);
+			}
+		}
+
+		@include media-breakpoint-down(lg) {
+			width: 336px;
+			height: auto;
+		}
+
+		@include media-breakpoint-down(sm) {
+			width: 100%;
+		}
+	}
+
+	&-containerImage {
+		height: 274.11px;
+		border-top-left-radius: 12px;
+		border-top-right-radius: 12px;
+		overflow: hidden;
+		transition: 0.4s all ease-in-out;
+		width: 100%;
+
+		@include media-breakpoint-down(lg) {
+			height: 201.97px;
+		}
+	}
+
+	&-image {
+		background-image: url('https://foodingly.netlify.app/assets/img/blogs/blog-1.png');
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border-top-right-radius: 12px;
+		border-top-left-radius: 12px;
+		height: 100%;
+		object-fit: cover;
+		transition: 0.4s all ease-in-out;
+		width: 100%;
+	}
+
+	&-cardInfo {
+		padding: 35px 20px 15px;
+
+		@include media-breakpoint-down(lg) {
+			padding: 15px 20px;
+		}
+	}
+
+	&-cardTitle {
+		color: map-get($black-color, primary);
+		font-family: $font-primary;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 35px;
+		margin-bottom: 10px;
+		transition: color ease-in-out 0.3s;
+
+		&:hover {
+			color: $green;
+		}
+	}
+
+	&-cardText {
+		color: map-get($gray, dark);
+		font-weight: 400;
+		font-family: $font-secondary;
+		font-size: 16px;
+		line-height: 28px;
+		margin-bottom: 17px;
+	}
+
+	&-cardDetails {
+		border-top: 1px solid map-get($gray, medium);
+		display: flex;
+		align-items: center;
+		flex: 1;
+		padding-top: 15px;
+		width: 100%;
+	}
+
+	&-date {
+		border-right: 1px solid map-get($gray, medium);
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		width: 100%;
+	}
+
+	&-icon {
+		background-color: $cream;
+		border-radius: 50px;
+		font-size: 17px;
+		padding: 8px;
+	}
+
+	&-dateBold {
+		color: map-get($black-color, secondary);
+		font-size: 16px;
+		font-family: $font-primary;
+		font-weight: 500;
+		line-height: 1.5;
+		margin-bottom: 0;
+	}
+
+	&-dateLight {
+		color: map-get($gray, dark);
+		font-size: 14px;
+		font-family: $font-secondary;
+		font-weight: 400;
+		line-height: 28px;
+		margin-bottom: 0;
+	}
+
+	&-owner {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-left: 24px;
+		width: 100%;
+	}
+}

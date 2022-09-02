@@ -1,0 +1,91 @@
+.Dinner {
+	width: 100%;
+	background-color: $white;
+
+	&-content {
+		display: flex;
+		align-items: flex-start;
+		padding: 80px 0;
+		margin: 0 auto;
+		max-width: 1440px;
+		width: 100%;
+
+		@include media-breakpoint-down(lg) {
+			width: 700px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			padding: 40px 0;
+			width: 365px;
+		}
+	}
+
+	&-info {
+		width: 720px;
+
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+		}
+	}
+
+	&-title {
+		color: map-get($black-color, secondary);
+		font-family: $font-primary;
+		font-size: 53px;
+		font-weight: 500;
+		line-height: 80px;
+
+		@include media-breakpoint-down(lg) {
+			font-size: 41px;
+			line-height: 65px;
+			width: 320px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			font-size: 30px;
+			line-height: 50px;
+			width: 100%;
+		}
+	}
+
+	&-text {
+		color: map-get($gray, dark);
+		font-family: $font-secondary;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 35px;
+		margin-bottom: 0;
+		max-width: 696px;
+		margin-bottom: 35px;
+
+		@include media-breakpoint-down(lg) {
+			width: 330px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			font-size: 14px;
+			line-height: 26px;
+			margin-bottom: 20px;
+			width: 340px;
+		}
+	}
+
+	&-image {
+		background-image: url('https://foodingly.netlify.app/assets/img/promotion/promo-1.png');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 321px;
+		object-fit: cover;
+		width: 546px;
+
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+			height: 197.53px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
+	}
+}

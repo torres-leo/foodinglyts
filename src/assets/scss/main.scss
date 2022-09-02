@@ -1,0 +1,27 @@
+@import 'base/reset';
+@import 'base/fonts';
+@import 'base/variables';
+@import 'base/placeholder';
+@import 'bootstrap/scss/bootstrap';
+
+@import 'page/home/hero';
+@import 'page/home/reservation';
+@import 'page/home/products';
+@import 'page/home/specialOffers';
+@import 'page/home/dinner';
+@import 'page/home/chefs';
+@import 'page/home/download';
+@import 'page/home/testimonial';
+@import 'page/home/subscribe';
+@import 'page/home/blog';
+
+@import 'page/contact/contact';
+
+@import 'components/appbar';
+@import 'components/appmenu';
+@import 'components/menuresponsive';
+@import 'components/button';
+@import 'components/dropdown';
+@import 'components/cart';
+@import 'components/banner';
+@import 'components/footer';
