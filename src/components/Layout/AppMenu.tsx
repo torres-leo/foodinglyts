@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { Dock } from 'react-dock';
 import Icon from '../Icon';
 import Button from '../Button';
@@ -9,8 +9,18 @@ const AppMenu = () => {
 	const context = useContext(AppContext);
 	const [isVisible, setIsVisible] = useState<boolean>(false);
 
+	useEffect(() => {
+		totalItemsCart();
+	}, []);
+
 	const handleChange = (): void => {
 		setIsVisible(!isVisible);
+	};
+
+	const totalItemsCart = async (): Promise<void> => {
+		if (!context?.cart) return;
+
+		await context?.renderTotalItemsCart();
 	};
 
 	const renderModal = () => (
@@ -122,7 +132,8 @@ const AppMenu = () => {
 						<li className='Appmenu-icon'>
 							<Icon className='fa-solid fa-bag-shopping' onClick={handleChange}>
 								<div className='counter'>
-									<span className='counter-text'>{context?.counter}</span>
+									<span className='counter-text'>{context?.quantity}</span>
+									{/* <span className='counter-text'>{!context?.cart?.products ? 0 : context?.cart.products.length}</span> */}
 								</div>
 							</Icon>
 						</li>

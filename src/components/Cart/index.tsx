@@ -18,6 +18,7 @@ const Cart = (props: CartProps) => {
 
 	const fetchCart = async (): Promise<void> => {
 		if (!isVisible) return;
+		if (!context?.cart) return;
 		await context?.showItemsCart();
 	};
 

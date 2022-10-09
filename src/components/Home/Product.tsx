@@ -20,6 +20,8 @@ const Product = (props: ProductProps) => {
 		if (!context?.cart) {
 			const cartCreated = await context?.createCart();
 			if (!cartCreated) return;
+
+			// console.log(cartCreated);
 			context?.setCart(cartCreated?.data);
 			return context?.addItemToCart(id, cartCreated.data.id);
 		}

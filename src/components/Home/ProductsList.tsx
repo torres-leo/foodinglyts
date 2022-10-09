@@ -16,6 +16,7 @@ const ProductsList = () => {
 
 	const filterProducts = async (category: string): Promise<void> => {
 		await refetch({
+			url: '/products',
 			params: {
 				category,
 			},
@@ -34,37 +35,43 @@ const ProductsList = () => {
 					<Button
 						type='button'
 						className={`button products ${active === '' ? 'filterActive' : ''}`}
-						onClick={() => filterProducts('')}>
+						onClick={() => filterProducts('')}
+					>
 						All Categories
 					</Button>
 					<Button
 						type='button'
 						className={`button products ${active === 'NOODLES' ? 'filterActive' : ''}`}
-						onClick={() => filterProducts('NOODLES')}>
+						onClick={() => filterProducts('NOODLES')}
+					>
 						Noodles
 					</Button>
 					<Button
 						type='button'
 						className={`button products ${active === 'BURGER' ? 'filterActive' : ''} `}
-						onClick={() => filterProducts('BURGER')}>
+						onClick={() => filterProducts('BURGER')}
+					>
 						Burger
 					</Button>
 					<Button
 						type='button'
 						className={`button products ${active === 'CHICKEN' ? 'filterActive' : ''}`}
-						onClick={() => filterProducts('CHICKEN')}>
+						onClick={() => filterProducts('CHICKEN')}
+					>
 						Chicken
 					</Button>
 					<Button
 						type='button'
 						className={`button products ${active === 'ICE_CREAM' ? 'filterActive' : ''}`}
-						onClick={() => filterProducts('ICE_CREAM')}>
+						onClick={() => filterProducts('ICE_CREAM')}
+					>
 						Ice Cream
 					</Button>
 					<Button
 						type='button'
 						className={`button products ${active === 'DRINKS' ? 'filterActive' : ''}`}
-						onClick={() => filterProducts('DRINKS')}>
+						onClick={() => filterProducts('DRINKS')}
+					>
 						Drinks
 					</Button>
 				</div>
