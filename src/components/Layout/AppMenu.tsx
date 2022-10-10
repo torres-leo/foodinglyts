@@ -133,7 +133,6 @@ const AppMenu = () => {
 							<Icon className='fa-solid fa-bag-shopping' onClick={handleChange}>
 								<div className='counter'>
 									<span className='counter-text'>{context?.quantity}</span>
-									{/* <span className='counter-text'>{!context?.cart?.products ? 0 : context?.cart.products.length}</span> */}
 								</div>
 							</Icon>
 						</li>

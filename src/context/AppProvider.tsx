@@ -40,11 +40,7 @@ const AppProvider = (props: PropsWithChildren<AppContextProps>) => {
 				productId,
 			},
 		});
-		// setQuantity(quantity + 1);
-		setTimeout(() => {
-			renderTotalItemsCart();
-		}, 100);
-		// showItemsCart();
+		await renderTotalItemsCart();
 	};
 
 	const showItemsCart = async () => {
@@ -62,8 +58,7 @@ const AppProvider = (props: PropsWithChildren<AppContextProps>) => {
 			url: `/${cart?.id}`,
 			method: 'GET',
 		});
-		console.log(data?.products?.length);
-		setQuantity(data.products.length);
+		setQuantity(data?.products?.length);
 	}, [cart, data]);
 
 	const deleteItemFromCart = async (productId: string, cartId: string): Promise<void> => {
@@ -75,9 +70,7 @@ const AppProvider = (props: PropsWithChildren<AppContextProps>) => {
 				cartId,
 			},
 		});
-		// setQuantity(quantity - 1);
 		await renderTotalItemsCart();
-		// showItemsCart();
 	};
 
 	return (
@@ -91,8 +84,7 @@ const AppProvider = (props: PropsWithChildren<AppContextProps>) => {
 				deleteItemFromCart,
 				renderTotalItemsCart,
 				quantity,
-			}}
-		>
+			}}>
 			{props.children}
 		</AppContext.Provider>
 	);
